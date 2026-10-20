@@ -4,7 +4,7 @@
 // rest.delete(url, callback)
 // function callback(estado, respuesta) {...}
 
-var conexion = require("./conexion_mysql.js")
+//var conexion = require("./conexion_mysql.js")
 var express = require("express");
 var app = express();
 var jwt = require('jwt-simple');
