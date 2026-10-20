@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+/*const mysql = require('mysql');
 const database = {
     host : 'localhost',
     user : 'root',
@@ -15,8 +15,8 @@ conexion.connect(function (err) {
     }
 });
 
-module.exports = conexion;
-/*const { Pool } = require('pg');
+module.exports = conexion;*/
+const { Pool } = require('pg');
 
 const conexion = new Pool({
     // Usa la variable de entorno DATABASE_URL (que pondremos en Render) o tu URI directa de Supabase
@@ -26,4 +26,4 @@ const conexion = new Pool({
     }
 });
 
-module.exports = conexion;*/
+module.exports = conexion;
