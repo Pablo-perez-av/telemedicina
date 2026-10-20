@@ -10,6 +10,16 @@ var app = express();
 var jwt = require('jwt-simple');
 var clave = 'miSecretoMasOscuro'; // clave para codificar / decodificar el token
 
+// 1. Importar el cliente de Supabase
+const { createClient } = require('@supabase/supabase-js');
+
+// 2. Configurar con tu URL y tu Public Key (anon key)
+const supabaseUrl = 'https://dgfcjncfeudptfufxwkf.supabase.co'; 
+const supabaseKey = 'sb_publishable_TCoGmWz1FlxhIn3O1OPxNw_Cudh1SdY'; 
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+app.use(express.json());
+app.use("/appCliente", express.static("cliente_rest"));
 
 /*
 var datos = require('./datos.js');
