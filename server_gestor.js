@@ -16,6 +16,10 @@ app.use("/appCliente", express.static("cliente_rest"));
 app.use("/appClienteGestor", express.static("cliente_gestor"));
 app.use("/appClienteSanitario", express.static("cliente_sanitario"));
 
+// Servir todos los archivos estáticos de la carpeta cliente_gestor en la raíz
+app.use(express.static(__dirname + "/cliente_gestor"));
+
+// Ruta principal que sirve el index.html
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/cliente_gestor/index.html");
 });
