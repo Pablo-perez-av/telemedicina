@@ -16,6 +16,9 @@ app.use("/appCliente", express.static("cliente_rest"));
 app.use("/appClienteGestor", express.static("cliente_gestor"));
 app.use("/appClienteSanitario", express.static("cliente_sanitario"));
 
+app.get("/", function(req, res) {
+    res.sendFile(__dirname + "/cliente_gestor/index.html");
+});
 /*
 Resumen códigos:
 200: Éxito
